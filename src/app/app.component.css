@@ -1,0 +1,112 @@
+p {
+  font-family: Lato;
+}
+.error {
+  color: red;
+}
+
+.title {
+  text-align: center;
+}
+
+.main-box {
+  border: 2px solid lightgray;
+  border-radius: 5px;
+  margin: 1px 200px 10px 200px;
+  padding: 20px;
+}
+
+.basic-detials-tag {
+  color: darkgoldenrod;
+  padding: 10px;
+  width: 100px;
+}
+
+.basic-detials-tag-main {
+  /*display: flex;*/
+}
+
+.title-border {
+  border-top: 2px solid darkgoldenrod;
+  margin-top: -10px;
+  /*margin-left: 90px;*/
+}
+
+
+.mandatory-color {
+  color: red;
+}
+
+
+.text-decor {
+  font-weight: bold;
+  font-size: 14px;
+  color: gray;
+  padding: 2px;
+}
+
+.each-input {
+  padding: 7px;
+  width: 30%;
+}
+
+.each-input-file {
+  width: 100%;
+  padding: 5px;
+}
+
+.each-input-multi {
+  padding: 5px;
+}
+
+.input-value {
+  width: 80%;
+  padding: 6px;
+  border: 1px solid lightgray;
+}
+
+.input-value-1 {
+  width: 90%;
+  padding: 4px;
+  border: 1px solid lightgray;
+}
+
+.input-value-2 {
+  display: flex;
+}
+
+.row-alignment {
+  display: flex;
+  margin-top: 10px;
+}
+
+.column-alignment {
+  padding: 2px;
+}
+
+.text-description {
+
+}
+
+.button-place {
+  text-align: center;
+  padding: 2px;
+}
+
+.submit-btn {
+  background-color: dodgerblue;
+  color: white;
+  padding: 12px;
+  border-radius: 3px;
+}
+
+.submit-btn-1 {
+  margin-left: 2px;
+  padding: 12px;
+  border-radius: 3px;
+}
+.error-msg
+{
+  font-size: 12px;
+  color:red;
+}

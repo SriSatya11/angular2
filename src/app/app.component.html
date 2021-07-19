@@ -1,0 +1,120 @@
+<!-- <hello name="{{ name }}"></hello>
+<p>
+  Start editing to see some magic happen :)
+</p> -->
+<div class="title">
+  <h1>Angular Form Demo</h1>
+</div>
+<div>
+  <form [formGroup]="loginForm" (ngSubmit)="formSubmitted()">
+    <div class="main-box">
+      <div class="basic-detials-tag-main">
+        <div class="basic-detials-tag">Basic Details</div>
+        <div class="title-border"></div>
+      </div>
+      <div class="column-alignment">
+        <div class="row-alignment">
+          <div class="each-input">
+            <div class="text-decor">First Name<span class="mandatory-color">*</span></div>
+            <input class="input-value" type="text" formControlName="firstName">
+            <div class="error-msg" *ngIf="firstName.invalid&&firstName.touched">Firstname required</div>
+          </div>
+          <div class="each-input">
+            <div class="text-decor">Last Name<span class="mandatory-color">*</span></div>
+            <input class="input-value" type="text" formControlName="lastName">
+            <div class="error-msg" *ngIf="lastName.invalid&&lastName.touched">lastname required</div>
+          </div>
+          <div class="each-input">
+            <div class="text-decor">Marital Status<span class="mandatory-color">*</span></div>
+            <div class="input-value-2">
+              <div>
+                <input id="married" type="radio" value="MARRIED" name="maritalStatus" formControlName="maritalStatus">
+                <label class="text-decor" for="married">Married</label>
+              </div>
+              <div>
+                <input id="un-married" type="radio" value="UN_MARRIED" name="maritalStatus"
+                       formControlName="maritalStatus">
+                <label class="text-decor" for="un-married">Un-Married</label>
+              </div>
+            </div>
+            <div class="error-msg" *ngIf="maritalStatus.invalid&&maritalStatus.touched">marital status required</div>
+          </div>
+        </div>
+        <div class="row-alignment">
+          <div class="each-input">
+            <div class="text-decor">Highest Qualification<span class="mandatory-color">*</span></div>
+            <input class="input-value" type="number" formControlName="highestQualification">
+            <div class="error-msg" *ngIf="highestQualification.invalid&&highestQualification.touched">highestQualification required</div>
+          </div>
+          <div class="each-input">
+            <div class="text-decor">Contact Number<span class="mandatory-color">*</span></div>
+            <input class="input-value" type="text" formControlName="contactNumber">
+            <div class="error-msg" *ngIf="contactNumber.invalid&&contactNumber.touched">ContactNumber required</div>
+          </div>
+          <div class="each-input">
+            <div class="text-decor">Email ID<span class="mandatory-color">*</span></div>
+            <input class="input-value" type="text" formControlName="emailId">
+            <div class="error-msg" *ngIf="emailId.invalid&&emailId.touched">EmailID required(please provide valid email)</div>
+          </div>
+        </div>
+        <div class="row-alignment">
+          <div class="each-input">
+            <div class="text-decor">DOB</div>
+            <input class="input-value" type="date" formControlName="dob">
+            <div class="error-msg" *ngIf="dob.invalid&&dob.touched">DOB required</div>
+          </div>
+          <div class="each-input-multi">
+            <div class="text-decor">Hobbies<span class="mandatory-color">*</span></div>
+            <div class="input-value-2">
+              <div class="text-decor" *ngFor="let data of hobbiesList">
+                <input type="checkbox" (change)="onChangeHobbie(data.value, $event)"> {{data.name}}<br>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="error-msg" *ngIf="this.loginForm.controls['hobbiesList'].errors?.required">Select atleast one hobby</div> -->
+        </div> 
+        <div class="row-alignment">
+          <div class="each-input-file">
+            <div class="text-decor">Description</div>
+            <textarea formControlName="disc" class="input-value-1" rows="4"></textarea>
+            <div class="error-msg" *ngIf="disc.invalid&&disc.touched">Description required(Max Length allowed is 500 characters)</div>
+        </div>
+      </div>
+      <div class="basic-detials-tag-main">
+        <div class="basic-detials-tag">Address</div>
+        <div class="titile-boarder"></div>
+      </div>
+      <div class="column-alignment">
+        <div class="row-alignment">
+          <div class="each-input">
+            <div class="text-decor">Street</div>
+            <input class="input-value" type="text" formControlName="street">
+            <div class="error-msg" *ngIf="street.invalid&&street.touched">Street required</div>
+          </div>
+          <div class="each-input">
+            <div class="text-decor">City</div>
+            <input class="input-value" type="text" formControlName="city">
+            <div class="error-msg" *ngIf="city.invalid&&city.touched">City required</div>
+          </div>
+          <div class="each-input">
+            <div class="text-decor">Country</div>
+            <input class="input-value" type="text" formControlName="country">
+            <div class="error-msg" *ngIf="country.invalid&&country.touched">country required</div>
+          </div>
+        </div>
+        <div class="row-alignment">
+          <div class="each-input">
+            <div class="text-decor">Zipcode</div>
+            <input class="input-value" type="number" formControlName="zipcode">
+            <div class="error-msg" *ngIf="zipcode.invalid&&zipcode.touched">zipcode required</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="button-place">
+      <button class="submit-btn" type="submit">Submit</button>
+      <button class="submit-btn-1" type="button" (click)="reset()">Reset</button>
+    </div>
+   </div>  
+  </form>
+</div>
